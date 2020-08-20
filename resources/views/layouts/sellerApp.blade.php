@@ -52,6 +52,7 @@
                             <a href="{{ route('seller.seller.showCustomerOrders') }}" class="nav-link text-dark" href="#">ORDERS</a>
                         </li>
                     </ul>
+                    @endcan
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -87,7 +88,6 @@
                         </li>
                         @endguest
                     </ul>
-                    @endcan
                 </div>
             </div>
         </nav>

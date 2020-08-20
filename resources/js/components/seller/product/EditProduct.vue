@@ -74,10 +74,6 @@
                 <span class="categoryc_name"></span>
             </div>
 
-            <div class="row no-gutters">
-                <img :src="form.imagePath" alt="" class="img-fluid" style="width: 450px; height:450px;">
-            </div>
-
             <!-- input form -->
             <form @submit.prevent="editProduct()">
                 <div class='form-group row'>
@@ -179,6 +175,12 @@
                         <input type="text" class="form-control" v-model="form.imagePath" max="255" required>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-2"></div>
+                    <div class="col-md-10 col-sm-10">
+                        <img :src="form.imagePath" alt="" class="img-fluid" style="width: 100px; height:100px;">
+                    </div>
+                </div>
 
                 <!-- https://www.digitalocean.com/community/tutorials/vuejs-iterating-v-for -->
                 <div class='form-group row'>
@@ -217,7 +219,7 @@
 
                 <div class='form-group row'>
                     <div class='offset-sm-2 offset-md-2 col-sm-4 col-md-4'>
-                        <button class='btn btn-lg btn-primary'>Add Product</button>
+                        <button class='btn btn-lg btn-primary'>Edit Product</button>
                     </div>
                 </div>
             </form>

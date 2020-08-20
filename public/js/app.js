@@ -2172,6 +2172,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['product_id'],
   data: function data() {
@@ -60295,14 +60297,6 @@ var render = function() {
           _vm._v(" "),
           _vm._m(4),
           _vm._v(" "),
-          _c("div", { staticClass: "row no-gutters" }, [
-            _c("img", {
-              staticClass: "img-fluid",
-              staticStyle: { width: "450px", height: "450px" },
-              attrs: { src: _vm.form.imagePath, alt: "" }
-            })
-          ]),
-          _vm._v(" "),
           _c(
             "form",
             {
@@ -60787,6 +60781,18 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-2 col-sm-2" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-10 col-sm-10" }, [
+                  _c("img", {
+                    staticClass: "img-fluid",
+                    staticStyle: { width: "100px", height: "100px" },
+                    attrs: { src: _vm.form.imagePath, alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
               _c("div", { staticClass: "form-group row" }, [
                 _c(
                   "label",
@@ -61063,7 +61069,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "form-group row" }, [
       _c("div", { staticClass: "offset-sm-2 offset-md-2 col-sm-4 col-md-4" }, [
         _c("button", { staticClass: "btn btn-lg btn-primary" }, [
-          _vm._v("Add Product")
+          _vm._v("Edit Product")
         ])
       ])
     ])

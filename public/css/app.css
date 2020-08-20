@@ -10910,3 +10910,10 @@ a.text-dark:focus {
   top: 80px;
 }
 
+#preview img {
+  height: 100px;
+  width: 100px;
+  float: left;
+  margin: 3px;
+}
+
