@@ -4,7 +4,7 @@
 <div class="container mt-5">
     <div class="row no-gutters">
         <div class="col-md-12 col-sm-12">
-            <div class="bg-primary" style="border: 2px solid blue; min-height: 600px;">
+            <div class="bg-warning" style="border: 2px solid black; min-height: 600px;">
                 <div class="display-4 m-5">
                     You are in Seller's page.
                 </div>
