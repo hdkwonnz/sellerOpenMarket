@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div class="row">
+            <div>{{ this.productName }}</div>
+        </div>
         <div class="row no-gutters">
             <div class="col-md-7 col-sm-7">
                 <h4>CUSTOMER ORDER DETAILS</h4>
@@ -125,6 +128,8 @@
 
 <script>
     export default {
+        props:['user_role'],
+
         data(){
             return{
                 orders: {},
@@ -133,6 +138,7 @@
                 termSw: false,
                 shippedAt: "",
                 orderId: "",
+                productName: "",
             }
         },
 
@@ -234,7 +240,13 @@
         },
 
         mounted() {
-
+            Echo.private('notice-seller')
+            .listen('NoticeToSellerEvent', (product) => {
+                //console.log(product);
+                if (this.user_role == 'seller'){
+                    this.productName = product.name;
+                }
+            });
         }
     }
 </script>
