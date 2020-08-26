@@ -36,6 +36,7 @@ Vue.component('product-input', require('./components/seller/product/ProductInput
 Vue.component('my-products', require('./components/seller/product/MyProducts.vue').default);
 Vue.component('edit-products', require('./components/seller/product/EditProduct.vue').default);
 Vue.component('customer-orders', require('./components/seller/seller/CustomerOrders.vue').default);
+Vue.component('alert-order', require('./components/seller/seller/AlertOrder.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

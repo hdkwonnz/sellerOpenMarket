@@ -27,6 +27,7 @@
         "laravel-echo": "^1.8.1",
         "moment": "^2.27.0",
         "pusher-js": "^7.0.0",
-        "vue-numeral-filter": "^2.0.0"
+        "vue-numeral-filter": "^2.0.0",
+        "vue-strap": "github:wffranco/vue-strap"
     }
 }
