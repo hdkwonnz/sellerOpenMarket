@@ -55,6 +55,8 @@
                     @endcan
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <!-- order notifications -->
+                        @include('includes.orderNotifications')
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">

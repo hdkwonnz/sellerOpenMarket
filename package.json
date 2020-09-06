@@ -28,6 +28,7 @@
         "moment": "^2.27.0",
         "pusher-js": "^7.0.0",
         "vue-numeral-filter": "^2.0.0",
-        "vue-strap": "github:wffranco/vue-strap"
+        "vue-strap": "github:wffranco/vue-strap",
+        "vue-timeago": "^5.1.2"
     }
 }

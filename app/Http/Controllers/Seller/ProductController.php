@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Redirect;
 
 class ProductController extends Controller
 {
@@ -24,6 +25,12 @@ class ProductController extends Controller
         }
 
         return unserialize($product->photo_paths);
+    }
+
+    public function showProductById($id)
+    {
+        $url = env('APP_URL_MAIN').'/product/details/'.$id;
+        return Redirect::to($url);
     }
 
     public function uploadImages(Request $request)

@@ -26,6 +26,7 @@ Route::get('showVerificationMsg','HomeController@showVerificationMsg')->middlewa
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // seller/product
 Route::get('/seller/product/test/{id}', 'Seller\ProductController@test')->middleware('auth','can:isSeller');
+Route::get('/seller/product/showProductById/{id}', 'Seller\ProductController@showProductById')->middleware('auth','can:isSeller');;
 Route::get('/seller/product/showProductInputForm', 'Seller\ProductController@showProductInputForm')->name('seller.product.showProductInputForm')->middleware('auth','can:isSeller');
 Route::get('/seller/product/getCategoryAs', 'Seller\ProductController@getCategoryAs')->name('seller.product.getCategoryAs')->middleware('auth','can:isSeller');
 Route::get('/seller/product/getCategoryBbyId', 'Seller\ProductController@getCategoryBbyId')->name('seller.product.getCategoryBbyId')->middleware('auth','can:isSeller');

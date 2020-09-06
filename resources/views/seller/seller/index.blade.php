@@ -11,8 +11,10 @@
                 @auth
                 @if ((Auth::user()->role) == 'seller')
                 <div class="display-4 m-5">
-                    Welcome to Hmarket... <br>
-                    Please select your menu.
+                    <span style="word-break: break-all;">
+                        Welcome to H-Mart... <br>
+                        Please select your menu.
+                    </span>
                 </div>
                 @else
                 @php
@@ -23,9 +25,11 @@
 
                 @guest
                 <div class="display-4 m-5">
-                    Please login in <br>
-                    or <br>
-                    You need to get seller's permissions after register.
+                    <span style="word-break: break-all;">
+                        Please login in <br>
+                        or <br>
+                        You need to get seller's permissions after register.
+                    </span>
                 </div>
                 @endguest
             </div>

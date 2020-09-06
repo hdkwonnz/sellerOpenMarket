@@ -36,7 +36,7 @@
         mounted() {
             Echo.private('notice-seller')
             .listen('NoticeToSellerEvent', (product) => {
-                //console.log(product);
+                // console.log(product);
                 if (this.user_role == 'seller'){
                     this.productName = product.name;
                     this.showAlert = true;
