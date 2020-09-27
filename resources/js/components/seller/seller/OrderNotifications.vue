@@ -76,7 +76,7 @@
                 //console.log(order);
                 if (this.user_role == 'seller'){
                     this.notifications.unshift({
-                        description: 'Total Amount: ' + order.total_amount + ' updated',
+                        description: 'Amount: $' + order.total_amount + ' updated',
                         url: '/seller/customerOrderById' + '/' + order.id,
                         time: new Date()
                     })

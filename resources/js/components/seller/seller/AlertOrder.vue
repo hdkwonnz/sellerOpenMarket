@@ -3,7 +3,7 @@
         <alert v-model="showAlert" placement="top-right" duration="40000" type="success" width="400px" dismissable>
             <span class="icon-ok-circled alert-icon-float-left"></span>
             <strong>Order Status Updated</strong>
-            <p>{{ orderAmount }} has been ordered.</p>
+            <p>${{ orderAmount }} has been ordered.</p>
         </alert>
     </div>
 </template>
