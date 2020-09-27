@@ -59,13 +59,25 @@
             //     }
             // });
 
+            // Echo.private('notice-seller')
+            // .listen('NoticeToSellerEvent', (product) => {
+            //     console.log(product);
+            //     if (this.user_role == 'seller'){
+            //         this.notifications.unshift({
+            //             description: 'Product Name: ' + product.name + ' updated',
+            //             url: '/seller/product/showProductById/' + product.id,
+            //             time: new Date()
+            //         })
+            //     }
+            // });
+
             Echo.private('notice-seller')
-            .listen('NoticeToSellerEvent', (product) => {
-                console.log(product);
+            .listen('NoticeToSellerEvent', (order) => {
+                //console.log(order);
                 if (this.user_role == 'seller'){
                     this.notifications.unshift({
-                        description: 'Product Name: ' + product.name + ' updated',
-                        url: '/seller/product/showProductById/' + product.id,
+                        description: 'Total Amount: ' + order.total_amount + ' updated',
+                        url: '/seller/customerOrderById' + '/' + order.id,
                         time: new Date()
                     })
                 }

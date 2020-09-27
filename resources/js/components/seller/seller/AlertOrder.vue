@@ -3,7 +3,7 @@
         <alert v-model="showAlert" placement="top-right" duration="40000" type="success" width="400px" dismissable>
             <span class="icon-ok-circled alert-icon-float-left"></span>
             <strong>Order Status Updated</strong>
-            <p>{{ productName }} has been ordered.</p>
+            <p>{{ orderAmount }} has been ordered.</p>
         </alert>
     </div>
 </template>
@@ -20,6 +20,7 @@
         data(){
             return{
                 productName: "",
+                orderAmount:"",
                 showAlert: false,
             }
         },
@@ -34,11 +35,20 @@
         },
 
         mounted() {
+            // Echo.private('notice-seller')
+            // .listen('NoticeToSellerEvent', (product) => {
+            //     // console.log(product);
+            //     if (this.user_role == 'seller'){
+            //         this.productName = product.name;
+            //         this.showAlert = true;
+            //     }
+            // });
+
             Echo.private('notice-seller')
-            .listen('NoticeToSellerEvent', (product) => {
+            .listen('NoticeToSellerEvent', (order) => {
                 // console.log(product);
                 if (this.user_role == 'seller'){
-                    this.productName = product.name;
+                    this.orderAmount = order.total_amount;
                     this.showAlert = true;
                 }
             });

@@ -66,6 +66,31 @@ class SellerController extends Controller
         ]);
     }
 
+    public function customerOrderById($id)
+    {
+        if ($id == "" || null){
+            $errorMsg = "Please enter order Id.";
+
+            return view('order.orderDetailsById', compact('errorMsg'));
+        }
+
+        $order = Order::with('user','orderdetails','address')
+                        ->where('id','=',$id)
+                        ->first();
+
+        // return $orders;
+
+        if (!$order){
+            $errorMsg = "Order does not exist.";
+        }else{
+            $errorMsg = null;
+        }
+
+        return view('seller.seller.showCustomerOrderById', compact('order','errorMsg'));
+        // $orderDetails = $order;
+        // return view('emails.toCustomer.orderDetails', compact('orderDetails','errorMsg'));
+    }
+
 
     public function customerOrders()
     {
